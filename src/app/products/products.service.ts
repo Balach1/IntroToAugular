@@ -15,16 +15,16 @@ export class ProductService {
 
     constructor(private http: HttpClient) {}
 
-    getProducts(): Observable<IProduct>[] {
+    getProducts(): Observable<IProduct[]> {
         return this.http.get<IProduct[]>(this.productUrl).pipe(
-            tap(data => console.log('All: ' + JSON.stringify(data))), 
+            tap(data => console.log('All: ' + JSON.stringify(data))),
             catchError(this.handleError)
         );
     }
 
     private handleError(err: HttpErrorResponse) {
         let errorMessage = '';
-        if (err.error instanceof ErrorEvent){
+        if (err.error instanceof ErrorEvent) {
             errorMessage = `An error occurred: ${err.status}`;
         } else {
             errorMessage = `Server returned code: ${err.status}, error message is: ${err.message}`;

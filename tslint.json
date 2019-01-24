@@ -25,6 +25,8 @@
       true,
       "spaces"
     ],
+    "disable-next-line:no-unused-expression":"no-unused-expression",
+    "disable-next-line":"prefer-const",
     "interface-over-type-literal": true,
     "label-position": true,
     "max-line-length": [
@@ -126,6 +128,6 @@
     "use-life-cycle-interface": true,
     "use-pipe-transform-interface": true,
     "component-class-suffix": true,
-    "directive-class-suffix": true
+    "directive-class-suffix": true,
   }
 }
